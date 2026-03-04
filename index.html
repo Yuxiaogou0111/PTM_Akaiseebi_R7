@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Simulation Viewer</title>
+<style>
+body{
+    font-family: Klee;
+    text-align:center;
+    background:#f4f4f4;
+}
+
+button{
+    padding:12px 20px;
+    margin:10px;
+    font-size:18px;
+}
+
+video{
+    width:900px;
+    margin-top:20px;
+}
+</style>
+<script>
+function changeVideo(file){
+    document.getElementById("player").src=file
+}
+</script>
+</head>
+<body>
+<h2>Particle Tracking Simulation</h2>
+<p>Select simulation</p>
+<select onchange="changeVideo(this.value)">
+<option value="Akaiseebi_2019-2020.mp4">Aogashima 2011-08-24</option>
+<option value="Akaiseebi_2020-2021.mp4">Aogashima 2014-07-16</option>
+<option value="Akaiseebi_2021-2022.mp4">Aogashima 2017-07-20</option>
+</select>
+<br>
+<video id="player" autoplay loop muted playsinline controls>
+<source src="Akaiseebi_2019-2020.mp4" type="video/mp4">
+</video>
+</body>
+</html>
